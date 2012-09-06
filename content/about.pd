@@ -1,0 +1,7 @@
+# About the author
+
+Charles R. Hogg III wishes he knew how to use pandoc.  So, here's some vim code:
+
+```vim
+setlocal nohlsearch
+```

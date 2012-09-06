@@ -1,0 +1,52 @@
+# Motivations
+
+Why do a new website?  Because the time is right.
+
+## An online home for everything
+
+I found I needed a home for my research
+
+# Needs
+
+What do I need this website to be able to do?
+
+## Syntax highlighting
+
+[Coderay](http://coderay.rubychan.de/ "Coderay - Fast and easy syntax highlighting for selected languages.")
+or
+[pygments](http://pygments.org/ "pygments - Python syntax highlighting")?
+
+Coderay looks good, and has a nice, expressive Ruby syntax.
+But it doesn't highlight `R` _or_ `vimscript`.
+Pygments _does_ -- as well as [a whole lot more](http://pygments.org/languages/
+"The ever-growing range of languages supported by pygments")!
+
+I'm going with pygments.
+
+### Problems with pandoc
+
+I do all my writing in [pandoc](http://johnmacfarlane.net/pandoc/index.html
+"Pandoc - a universal document converter").
+It seems like the most flexible markdown superset that meets _all_ my needs:
+blogging, scientific papers, and talk slides.
+
+~~~~~~~~~~~~~~~ {.vim .numberLines startFrom="3"}
+let g:adjective = "flexible"
+echom "I hear pandoc is pretty" g:adjective
+~~~~~~~~~~~~~~~
+
+Okay, I see pandoc doesn't have support for `vim` highlighting.
+
+```bash
+for I in ls
+do
+  echo "$I"
+done
+```
+
+```vim
+let g:adjective = "flexible"
+echom "I hear pandoc is pretty" g:adjective
+```
+
+$$\sum_{i=0}^\infty \frac{1}{2^i}$$ should work
