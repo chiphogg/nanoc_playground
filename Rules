@@ -31,7 +31,13 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    case item[:extension]
+    when 'haml'
+      filter :haml
+      raise "WTF?!"
+    when 'html'
+      filter :erb
+    end
     layout 'default'
   end
 end
@@ -54,4 +60,4 @@ route '*' do
   end
 end
 
-layout '*', :erb
+layout '*', :haml, :format => :html5
